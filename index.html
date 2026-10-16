@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidra Qurban — Software Engineer & Mobile Developer</title>
+    <meta
+      name="description"
+      content="Sidra Qurban's professional portfolio — Software Engineer specializing in React.js, React Native, and modern web & mobile development."
+    />
+    <meta
+      name="keywords"
+      content="Sidra Qurban, Software Engineer, React Native, React.js, Mobile Developer, Web Developer, Portfolio"
+    />
+    <meta property="og:title" content="Sidra Qurban — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software Engineer | Web & Mobile Developer | React.js & React Native Specialist"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">
+          <span class="logo-sq">Sidra Qurban
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="#home" class="nav-link active" data-section="home">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link" data-section="projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-section="contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <a href="mailto:sidraqurban77@gmail.com" class="nav-cta" id="hireMeBtn"
+          >Hire Me</a
+        >
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#home" class="mob-link">Home</a></li>
+        <li><a href="#about" class="mob-link">About</a></li>
+        <li><a href="#skills" class="mob-link">Skills</a></li>
+        <li><a href="#projects" class="mob-link">Projects</a></li>
+        <li><a href="#roadmap" class="mob-link">Roadmap</a></li>
+        <li><a href="#contact" class="mob-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- ======= HERO SECTION ======= -->
+    <section class="hero" id="home">
+      <!-- Animated canvas background -->
+      <canvas id="heroCanvas"></canvas>
+
+      <!-- Floating blobs -->
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+
+      <div class="hero-content">
+              <h1 class="hero-title">
+          <span class="hero-greeting">Hello, I'm</span>
+          <span class="hero-name">Sidra</span>
+        </h1>
+
+        <div class="hero-role-wrapper">
+          <span class="role-prefix">I turn ideas into</span>
+          <div class="role-slider">
+            <div class="role-track" id="roleTrack">
+              <span>Mobile Applications</span>
+              <span>Web Experiences</span>
+              <span>React Native Apps</span>
+              <span>Mobile Applications</span>
+              <span>Responsive Websites</span>
+              <span>AI-Powered Solutions </span>
+              <span>Scalable Applications</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="hero-desc">
+        I'm a Software Engineer passionate about building intuitive, high-performance digital products. From real-world ride-hailing apps to AI-powered healthcare solutions, I turn ideas into reliable applications that solve real problems.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" id="viewWorkBtn">
+            <span>View My Work</span>
+            <i data-lucide="arrow-right" class="btn-icon"></i>
+          </a>
+          <a href="#contact" class="btn btn-ghost" id="getInTouchBtn">
+            <span>Get In Touch</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-target="21">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="2">0</span>
+            <span class="stat-label">Years Coding</span>
+          </div>
+          <!-- <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="5">0</span>
+            <span class="stat-label">Languages</span>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="hero-image-container">
+        <div class="hero-image-ring ring-1"></div>
+        <div class="hero-image-ring ring-2"></div>
+        <div class="hero-image-ring ring-3"></div>
+        <div class="hero-avatar">
+          <img
+            src="https://avatars.githubusercontent.com/u/100536445?v=4"
+            alt="Sidra Qurban"
+            id="heroAvatar"
+          />
+        </div>
+        <!-- Floating tech chips -->
+        <div class="tech-chip chip-1">
+          <i data-lucide="smartphone" class="chip-icon"></i>React Native
+        </div>
+        <div class="tech-chip chip-2">
+          <i data-lucide="globe" class="chip-icon"></i>React.js
+        </div>
+        <div class="tech-chip chip-3">
+          <i data-lucide="cpu" class="chip-icon"></i>TypeScript
+        </div>
+        <div class="tech-chip chip-4">
+          <i data-lucide="zap" class="chip-icon"></i>Expo
+        </div>
+      </div>
+
+      <!-- Social sidebar -->
+      <div class="social-sidebar">
+        <a
+          href="https://github.com/SidraQurban"
+          target="_blank"
+          rel="noopener"
+          class="social-link"
+          aria-label="GitHub"
+        >
+          <i data-lucide="github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/sidra-qurban-709b38231/"
+          target="_blank"
+          rel="noopener"
+          class="social-link"
+          aria-label="LinkedIn"
+        >
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a
+          href="mailto:sidraqurban77@gmail.com"
+          class="social-link"
+          aria-label="Email"
+        >
+          <i data-lucide="mail"></i>
+        </a>
+        <div class="social-line"></div>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ======= ABOUT SECTION ======= -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-tag">Who I Am</span>
+          <h2 class="section-title">
+            About <span class="gradient-text">Me</span>
+          </h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual" data-animate>
+            <div class="about-image-wrapper">
+              <img
+                src="https://avatars.githubusercontent.com/u/100536445?v=4"
+                alt="Sidra Qurban"
+                class="about-img"
+              />
+              <div class="about-img-glow"></div>
+            </div>
+            <div class="about-card experience-card" data-animate>
+              <div class="exp-icon"><i data-lucide="code-2"></i></div>
+              <div>
+                <span class="exp-num">2</span>
+                <span class="exp-label">Years of Experience</span>
+              </div>
+            </div>
+            <div class="about-card projects-card" data-animate>
+              <div class="exp-icon"><i data-lucide="layers"></i></div>
+              <div>
+                <span class="exp-num">21</span>
+                <span class="exp-label">GitHub Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text" data-animate>
+            <p class="about-lead">
+              I'm a <strong>Software Engineer</strong> based in Pakistan,
+              passionate about building digital products that are fast,
+              accessible, and beautifully crafted.
+            </p>
+            <p class="about-body">
+              My journey started with web fundamentals — HTML, CSS, and vanilla
+              JavaScript — before evolving into building complex,
+              production-scale mobile applications with
+              <strong>React Native</strong>. I've shipped apps ranging from an
+              AI-powered orthopaedic diagnostic tool to full-featured
+              ride-hailing platforms.
+            </p>
+            <p class="about-body">
+              I thrive at the intersection of engineering and design — writing
+              clean, maintainable code while obsessing over the user experience.
+              Whether it's optimizing performance, implementing elegant
+              animations, or architecting scalable state management, I bring
+              craft to every line of code.
+            </p>
+
+            <div class="about-tags">
+              <span class="tag">Problem Solver</span>
+              <span class="tag">UI/UX Focused</span>
+              <span class="tag">Mobile Expert</span>
+              <span class="tag">Clean Code</span>
+              <span class="tag">Fast Learner</span>
+            </div>
+
+            <div class="about-links">
+              <a
+                href="https://github.com/SidraQurban"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary"
+                id="githubBtn"
+              >
+                <i data-lucide="github"></i>
+                <span>GitHub Profile</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sidra-qurban-709b38231/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-outline"
+                id="linkedinBtn"
+              >
+                <i data-lucide="linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= SKILLS SECTION ======= -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-tag">What I Work With</span>
+          <h2 class="section-title">
+            Skills &amp; <span class="gradient-text">Technologies</span>
+          </h2>
+        </div>
+
+        <div class="skills-grid" data-animate>
+
+          <!-- Frontend Card -->
+          <div class="skill-category" data-animate>
+            <div class="category-header">
+              <div class="category-icon cat-frontend">
+                <i data-lucide="monitor"></i>
+              </div>
+              <div class="category-title-group">
+                <h3>Frontend</h3>
+                <p class="category-subtitle">What users see and interact with</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag"><i data-lucide="atom" class="stag-icon"></i>React.js</span>
+              <span class="skill-tag"><i data-lucide="smartphone" class="stag-icon"></i>React Native</span>
+              <span class="skill-tag tag-accent"><i data-lucide="braces" class="stag-icon"></i>JavaScript</span>
+              <span class="skill-tag tag-accent"><i data-lucide="file-code" class="stag-icon"></i>TypeScript</span>
+              <span class="skill-tag"><i data-lucide="code" class="stag-icon"></i>HTML</span>
+              <span class="skill-tag"><i data-lucide="palette" class="stag-icon"></i>CSS</span>
+              <span class="skill-tag tag-cyan"><i data-lucide="wind" class="stag-icon"></i>Tailwind CSS</span>
+            </div>
+          </div>
+
+          <!-- Backend Card -->
+          <div class="skill-category" data-animate>
+            <div class="category-header">
+              <div class="category-icon cat-backend">
+                <i data-lucide="server"></i>
+              </div>
+              <div class="category-title-group">
+                <h3>Backend</h3>
+                <p class="category-subtitle">Business logic, APIs, and communication</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag tag-green"><i data-lucide="hexagon" class="stag-icon"></i>Node.js</span>
+              <span class="skill-tag"><i data-lucide="zap" class="stag-icon"></i>Express.js</span>
+              <span class="skill-tag tag-accent"><i data-lucide="plug" class="stag-icon"></i>REST APIs</span>
+              <span class="skill-tag tag-cyan"><i data-lucide="activity" class="stag-icon"></i>WebSockets</span>
+              <span class="skill-tag tag-yellow"><i data-lucide="cpu" class="stag-icon"></i>Python</span>
+            </div>
+          </div>
+
+          <!-- Database & Storage Card -->
+          <div class="skill-category" data-animate>
+            <div class="category-header">
+              <div class="category-icon cat-database">
+                <i data-lucide="database"></i>
+              </div>
+              <div class="category-title-group">
+                <h3>Database &amp; Storage</h3>
+                <p class="category-subtitle">Store and manage application data</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag tag-blue"><i data-lucide="database" class="stag-icon"></i>PostgreSQL</span>
+              <span class="skill-tag tag-accent"><i data-lucide="table-2" class="stag-icon"></i>SQL</span>
+              <span class="skill-tag tag-yellow"><i data-lucide="flame" class="stag-icon"></i>Firebase</span>
+              <span class="skill-tag"><i data-lucide="hard-drive" class="stag-icon"></i>AsyncStorage</span>
+              <span class="skill-tag tag-green"><i data-lucide="lock" class="stag-icon"></i>Secure Storage</span>
+            </div>
+          </div>
+
+          <!-- Tools & Deployment Card -->
+          <div class="skill-category" data-animate>
+            <div class="category-header">
+              <div class="category-icon cat-tools">
+                <i data-lucide="wrench"></i>
+              </div>
+              <div class="category-title-group">
+                <h3>Tools &amp; Deployment</h3>
+                <p class="category-subtitle">Develop, test, and deploy applications</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag tag-accent"><i data-lucide="git-branch" class="stag-icon"></i>Git</span>
+              <span class="skill-tag"><i data-lucide="github" class="stag-icon"></i>GitHub</span>
+              <span class="skill-tag tag-orange"><i data-lucide="send" class="stag-icon"></i>Postman</span>
+              <span class="skill-tag tag-cyan"><i data-lucide="box" class="stag-icon"></i>Docker</span>
+              <span class="skill-tag tag-blue"><i data-lucide="triangle" class="stag-icon"></i>Vercel</span>
+              <span class="skill-tag tag-green"><i data-lucide="cloud" class="stag-icon"></i>Render</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tech Pills Marquee -->
+        <div class="tech-pills-container" data-animate>
+          <div class="pills-track">
+            <div class="pills-inner">
+              <span class="pill"><i data-lucide="atom" class="pill-icon"></i>React Native</span>
+              <span class="pill"><i data-lucide="triangle" class="pill-icon"></i>React.js</span>
+              <span class="pill"><i data-lucide="file-code" class="pill-icon"></i>TypeScript</span>
+              <span class="pill"><i data-lucide="braces" class="pill-icon"></i>JavaScript</span>
+              <span class="pill"><i data-lucide="wind" class="pill-icon"></i>Tailwind CSS</span>
+              <span class="pill"><i data-lucide="hexagon" class="pill-icon"></i>Node.js</span>
+              <span class="pill"><i data-lucide="zap" class="pill-icon"></i>Express.js</span>
+              <span class="pill"><i data-lucide="database" class="pill-icon"></i>PostgreSQL</span>
+              <span class="pill"><i data-lucide="flame" class="pill-icon"></i>Firebase</span>
+              <span class="pill"><i data-lucide="github" class="pill-icon"></i>GitHub</span>
+              <span class="pill"><i data-lucide="box" class="pill-icon"></i>Docker</span>
+              <span class="pill"><i data-lucide="cpu" class="pill-icon"></i>Python</span>
+              <span class="pill"><i data-lucide="cloud" class="pill-icon"></i>Render</span>
+              <span class="pill"><i data-lucide="layers" class="pill-icon"></i>HTML &amp; CSS</span>
+              <span class="pill"><i data-lucide="atom" class="pill-icon"></i>React Native</span>
+              <span class="pill"><i data-lucide="triangle" class="pill-icon"></i>React.js</span>
+              <span class="pill"><i data-lucide="file-code" class="pill-icon"></i>TypeScript</span>
+              <span class="pill"><i data-lucide="braces" class="pill-icon"></i>JavaScript</span>
+              <span class="pill"><i data-lucide="wind" class="pill-icon"></i>Tailwind CSS</span>
+              <span class="pill"><i data-lucide="hexagon" class="pill-icon"></i>Node.js</span>
+              <span class="pill"><i data-lucide="zap" class="pill-icon"></i>Express.js</span>
+              <span class="pill"><i data-lucide="database" class="pill-icon"></i>PostgreSQL</span>
+              <span class="pill"><i data-lucide="flame" class="pill-icon"></i>Firebase</span>
+              <span class="pill"><i data-lucide="github" class="pill-icon"></i>GitHub</span>
+              <span class="pill"><i data-lucide="box" class="pill-icon"></i>Docker</span>
+              <span class="pill"><i data-lucide="cpu" class="pill-icon"></i>Python</span>
+              <span class="pill"><i data-lucide="cloud" class="pill-icon"></i>Render</span>
+              <span class="pill"><i data-lucide="layers" class="pill-icon"></i>HTML &amp; CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ======= PROJECTS SECTION ======= -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-tag">My Work</span>
+          <h2 class="section-title">
+            Featured <span class="gradient-text">Projects</span>
+          </h2>
+        </div>
+
+        <div class="projects-filter" data-animate>
+          <button class="filter-btn active" data-filter="all" id="filterAll">
+            All
+          </button>
+          <button class="filter-btn" data-filter="mobile" id="filterMobile">
+            Mobile
+          </button>
+          <button class="filter-btn" data-filter="web" id="filterWeb">
+            Web
+          </button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Orthonx -->
+          <article
+            class="project-card featured"
+            data-category="mobile"
+            data-animate
+          >
+            <div class="project-card-inner">
+              <div class="project-visual orthonx-visual">
+                <div class="project-mockup">
+                  <div class="mockup-screen">
+                    <div class="mockup-header">
+                      <div class="mockup-dot"></div>
+                      <div class="mockup-dot"></div>
+                      <div class="mockup-dot"></div>
+                    </div>
+                    <div class="mockup-content orthonx-content">
+                      <i data-lucide="activity" class="mockup-icon"></i>
+                      <span>Orthonx AI</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-glow orthonx-glow"></div>
+              </div>
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="project-type">AI · Healthcare · Mobile</span>
+                  <span class="project-badge featured-badge">Featured</span>
+                </div>
+                <h3 class="project-title">Orthonx</h3>
+                <p class="project-desc">
+                  AI-powered healthcare mobile application — Final Year Project
+                  at Indus University. Uses deep learning to automatically
+                  detect fractures and bone abnormalities from X-ray scans,
+                  providing instant diagnostic assistance.
+                </p>
+                <div class="project-stack">
+                  <span class="stack-tag">React Native</span>
+                  <span class="stack-tag">Deep Learning</span>
+                  <span class="stack-tag">TypeScript</span>
+                  <span class="stack-tag">AI/ML</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/SidraQurban/Orthonx"
+                    target="_blank"
+                    rel="noopener"
+                    class="proj-link"
+                    aria-label="Orthonx GitHub"
+                  >
+                    <i data-lucide="github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- TezRide -->
+          <article class="project-card" data-category="mobile" data-animate>
+            <div class="project-card-inner">
+              <div class="project-visual tezride-visual">
+                <div class="project-mockup">
+                  <div class="mockup-screen">
+                    <div class="mockup-header">
+                      <div class="mockup-dot"></div>
+                      <div class="mockup-dot"></div>
+                      <div class="mockup-dot"></div>
+                    </div>
+                    <div class="mockup-content tezride-content">
+                      <i data-lucide="car" class="mockup-icon"></i>
+                      <span>TezRide</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-glow tezride-glow"></div>
+              </div>
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="project-type">Mobile · Transport</span>
+                </div>
+                <h3 class="project-title">TezRide</h3>
+                <p class="project-desc">
+                  Feature-rich ride-hailing and transportation mobile
+                  application with real-time tracking, driver-passenger
+                  matching, and seamless booking experience.
+                </p>
+                <div class="project-stack">
+                  <span class="stack-tag">React Native</span>
+                  <span class="stack-tag">Expo</span>
+                  <span class="stack-tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/SidraQurban/TezRide"
+                    target="_blank"
+                    rel="noopener"
+                    class="proj-link"
+                    aria-label="TezRide GitHub"
+                  >
+                    <i data-lucide="github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- TezRide Partner -->
+          <article class="project-card" data-category="mobile" data-animate>
+            <div class="project-card-inner">
+              <div class="project-visual partner-visual">
+                <div class="project-mockup">
+                  <div class="mockup-screen">
+                    <div class="mockup-header">
+                      <div class="mockup-dot"></div>
+                      <div class="mockup-dot"></div>
+                      <div class="mockup-dot"></div>
+                    </div>
+                    <div class="mockup-content partner-content">
+                      <i data-lucide="navigation" class="mockup-icon"></i>
+                      <span>Driver App</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-glow partner-glow"></div>
+              </div>
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="project-type">Mobile · Logistics</span>
+                </div>
+                <h3 class="project-title">TezRide Partner</h3>
+                <p class="project-desc">
+                  Partner/Driver companion app for the TezRide platform —
+                  handling ride logistics, earnings tracking, delivery
+                  management, and real-time order notifications.
+                </p>
+                <div class="project-stack">
+                  <span class="stack-tag">React Native</span>
+                  <span class="stack-tag">TypeScript</span>
+                  <span class="stack-tag">Expo</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/SidraQurban/Tezride_Partner"
+                    target="_blank"
+                    rel="noopener"
+                    class="proj-link"
+                    aria-label="TezRide Partner GitHub"
+                  >
+                    <i data-lucide="github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- E-Commerce ShopEase -->
+          <article class="project-card" data-category="mobile" data-animate>
+            <div class="project-card-inner">
+              <div class="project-visual shop-visual">
+                <div class="project-mockup">
+                  <div class="mockup-screen">
+                    <div class="mockup-header">
+                      <div class="mockup-dot"></div>
+                      <div class="mockup-dot"></div>
+                      <div class="mockup-dot"></div>
+                    </div>
+                    <div class="mockup-content shop-content">
+                      <i data-lucide="shopping-bag" class="mockup-icon"></i>
+                      <span>ShopEase</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-glow shop-glow"></div>
+              </div>
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="project-type">Mobile · E-Commerce</span>
+                </div>
+                <h3 class="project-title">ShopEase</h3>
+                <p class="project-desc">
+                  E-commerce mobile application with a polished UI — product
+                  browsing, cart management, and a seamless checkout flow
+                  designed for an exceptional shopping experience.
+                </p>
+                <div class="project-stack">
+                  <span class="stack-tag">React Native</span>
+                  <span class="stack-tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/SidraQurban/E-commerce-App"
+                    target="_blank"
+                    rel="noopener"
+                    class="proj-link"
+                    aria-label="ShopEase GitHub"
+                  >
+                    <i data-lucide="github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Weather App -->
+          <article class="project-card" data-category="web" data-animate>
+            <div class="project-card-inner">
+              <div class="project-visual weather-visual">
+                <div class="project-mockup">
+                  <div class="mockup-screen">
+                    <div class="mockup-header">
+                      <div class="mockup-dot"></div>
+                      <div class="mockup-dot"></div>
+                      <div class="mockup-dot"></div>
+                    </div>
+                    <div class="mockup-content weather-content">
+                      <i data-lucide="cloud-sun" class="mockup-icon"></i>
+                      <span>Weather App</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-glow weather-glow"></div>
+              </div>
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="project-type">Web · API</span>
+                </div>
+                <h3 class="project-title">Weather App</h3>
+                <p class="project-desc">
+                  Real-time weather forecasting web application powered by live
+                  weather API data — showing current conditions, hourly and
+                  weekly forecasts with a clean, modern UI.
+                </p>
+                <div class="project-stack">
+                  <span class="stack-tag">React.js</span>
+                  <span class="stack-tag">JavaScript</span>
+                  <span class="stack-tag">REST API</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/SidraQurban/Weather-App"
+                    target="_blank"
+                    rel="noopener"
+                    class="proj-link"
+                    aria-label="Weather App GitHub"
+                  >
+                    <i data-lucide="github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Food Recipe -->
+          <article class="project-card" data-category="mobile" data-animate>
+            <div class="project-card-inner">
+              <div class="project-visual food-visual">
+                <div class="project-mockup">
+                  <div class="mockup-screen">
+                    <div class="mockup-header">
+                      <div class="mockup-dot"></div>
+                      <div class="mockup-dot"></div>
+                      <div class="mockup-dot"></div>
+                    </div>
+                    <div class="mockup-content food-content">
+                      <i data-lucide="utensils" class="mockup-icon"></i>
+                      <span>Food Recipe</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-glow food-glow"></div>
+              </div>
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="project-type">Mobile · Lifestyle</span>
+                </div>
+                <h3 class="project-title">Food Recipe App</h3>
+                <p class="project-desc">
+                  Food ordering and recipe discovery application with a modern
+                  UI built with Tailwind CSS in React Native — browse, save, and
+                  explore meals from around the world.
+                </p>
+                <div class="project-stack">
+                  <span class="stack-tag">React Native</span>
+                  <span class="stack-tag">Tailwind CSS</span>
+                  <span class="stack-tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/SidraQurban/Food-Recipe"
+                    target="_blank"
+                    rel="noopener"
+                    class="proj-link"
+                    aria-label="Food Recipe GitHub"
+                  >
+                    <i data-lucide="github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-more" data-animate>
+          <a
+            href="https://github.com/SidraQurban?tab=repositories"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline"
+            id="moreReposBtn"
+          >
+            <i data-lucide="github"></i>
+            <span>View All 21 Repos on GitHub</span>
+            <i data-lucide="external-link"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+      <!-- ======= CONTACT SECTION ======= -->
+    <section class="contact" id="contact">
+      <div class="contact-bg-shape"></div>
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">
+            Let's <span class="gradient-text">Connect</span>
+          </h2>
+          <p class="section-subtitle">
+            Whether you have a project in mind, a role to fill, or just want to
+            say hi — my inbox is always open.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-animate>
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="mail"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">Email</span>
+                <a href="mailto:sidraqurban77@gmail.com" class="contact-value"
+                  >sidraqurban77@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="linkedin"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/sidra-qurban-709b38231/"
+                  target="_blank"
+                  rel="noopener"
+                  class="contact-value"
+                  >sidra-qurban-709b38231</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="github"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">GitHub</span>
+                <a
+                  href="https://github.com/SidraQurban"
+                  target="_blank"
+                  rel="noopener"
+                  class="contact-value"
+                  >SidraQurban</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="code"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">HackerRank</span>
+                <a
+                  href="https://www.hackerrank.com/profile/sidraqurban77"
+                  target="_blank"
+                  rel="noopener"
+                  class="contact-value"
+                  >sidraqurban77</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm" data-animate>
+            <div class="form-group">
+              <label for="nameInput">Full Name</label>
+              <input
+                type="text"
+                id="nameInput"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="emailInput">Email Address</label>
+              <input
+                type="email"
+                id="emailInput"
+                name="email"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="subjectInput">Subject</label>
+              <input
+                type="text"
+                id="subjectInput"
+                name="subject"
+                placeholder="What's this about?"
+              />
+            </div>
+            <div class="form-group">
+              <label for="messageInput">Message</label>
+              <textarea
+                id="messageInput"
+                name="message"
+                rows="5"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary btn-full"
+              id="sendMsgBtn"
+            >
+              <i data-lucide="send"></i>
+              <span>Send Message</span>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i data-lucide="check-circle"></i>
+              <span>Message sent! I'll get back to you soon.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-logo">
+            <span class="logo-sq">&lt;</span>SQ<span class="logo-sq"
+              >/&gt;</span
+            >
+          </div>
+          <p class="footer-copy">
+            Designed & built by <strong>Sidra Qurban</strong> — 2026
+          </p>
+          <div class="footer-socials">
+            <a
+              href="https://github.com/SidraQurban"
+              target="_blank"
+              rel="noopener"
+              class="footer-social"
+              aria-label="GitHub"
+            >
+              <i data-lucide="github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sidra-qurban-709b38231/"
+              target="_blank"
+              rel="noopener"
+              class="footer-social"
+              aria-label="LinkedIn"
+            >
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a
+              href="mailto:sidraqurban77@gmail.com"
+              class="footer-social"
+              aria-label="Email"
+            >
+              <i data-lucide="mail"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-top" id="backTop" aria-label="Back to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
